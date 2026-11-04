@@ -6,7 +6,7 @@ A Bash script that prints a quick performance snapshot for a Linux server: total
 
 - Linux with `/proc` mounted
 - Bash 4 or newer
-- `awk`, `df`, `free`, `ps`, `head`, and `sleep` (commonly available on Linux systems)
+- `awk`, `date`, `df`, `ps`, and `sleep` (commonly available on Linux systems)
 
 ## Run
 
