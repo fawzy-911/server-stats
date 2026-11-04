@@ -24,7 +24,8 @@ read_cpu_counters() {
   awk '$1 == "cpu" {
     idle = $5 + $6
     total = 0
-    for (i = 2; i <= NF; i++) total += $i
+    # guest and guest_nice are already included in user and nice.
+    for (i = 2; i <= 9 && i <= NF; i++) total += $i
     printf "%.0f %.0f\n", total, idle
     exit
   }' /proc/stat
